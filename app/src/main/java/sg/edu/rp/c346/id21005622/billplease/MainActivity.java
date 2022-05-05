@@ -66,15 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
 
                 double total = amount;
-                double gst = 0.07;
-                double SC = 0.1;
+                double gst = 1.07;
+                double SC = 1.10;
                 discount = discount / 100;
 
                 if(tbGST.isChecked()){
-                    total = total - (amount * gst)  ;
+                    total = amount * gst  ;
                 }
                 if(tbServiceCharge.isChecked()){
-                    total = total - (amount * SC);
+                    total = amount * SC;
                 }
                 total = total - (total * discount);
                 double each = total / pax;
